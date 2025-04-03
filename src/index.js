@@ -1,13 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import BlogPost from "./components/BlogPost.js";
+import Navbar from "./components/NavBar.js";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Navbar />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />{" "}
+        <Route path="/blog/:slug" element={<BlogPost />} />{" "}
+      </Routes>{" "}
+    </Router>{" "}
   </React.StrictMode>
 );
 
