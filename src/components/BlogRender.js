@@ -1,43 +1,42 @@
 import { BlogData } from "../utils/BlogData";
-
 import { Link } from "react-router-dom";
 
 const BlogRender = () => {
   return (
     <>
-      <div className=" mt-12  mb-32 ">
-        <div className="grid grid-cols-1 gap-6">
+      <div className="blog-container">
+        <div className="blog-grid">
           {BlogData.map((post) => {
             return (
               <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
-                className="border-b   border-gray-700 pb-6 mb-6 flex gap-4  hover:bg-[#2a3f5b] transition duration-300 rounded-sm pt-4 "
+                className="blog-card"
               >
                 {/* Blog Image */}
                 {post.image && (
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-24 h-24 object-cover rounded-lg"
+                    className="blog-image"
                   />
                 )}
 
                 {/* Blog Content */}
                 <div>
-                  <h2 className="text-2xl font-bold hover:text-[#00C853] transition duration-200">
+                  <h2 className="blog-title">
                     {post.title}
                   </h2>
-                  <p className="text-gray-400 text-sm">
+                  <p className="blog-date">
                     {formatDateWithSuperscript(post.date)}
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-2">
+                  <div className="blog-tags">
                     {post.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 rounded-md text-sm font-semibold shadow-md"
+                        className="blog-tag"
                         style={{
                           backgroundColor: tag.bgColor,
                           color: tag.textColor,
@@ -49,7 +48,7 @@ const BlogRender = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="mt-2 test-lg  text-gray-300">
+                  <p className="blog-description">
                     {post.description}
                   </p>
                 </div>

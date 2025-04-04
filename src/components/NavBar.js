@@ -8,17 +8,23 @@ import { TbBrandGmail } from "react-icons/tb";
 import { Links } from "../utils/Links";
 
 const Navbar = () => {
-  const sizeValue = 22;
+  const sizeValue = 24;
 
   return (
-    <nav className="flex justify-between items-center  mx-16 ">
+    <nav className="nav-bar">
       <a
         href="/resume.pdf"
         download="Anmol_Dhiman_Resume.pdf"
-        className="flex flex-row nav"
+        className="nav"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          textDecoration: "none",
+        }}
       >
-        <LuDownload size={sizeValue} className="mr-2" />
-        <p> My Resume</p>
+        <LuDownload size={sizeValue} style={{ marginRight: "8px" }} />
+        My Resume
       </a>
       <div className="flex gap-6">
         <a href={Links.twitter_x} target="_blank" className="nav">

@@ -1,16 +1,16 @@
 const About = () => {
   return (
     <>
-      <div className="flex flex-row  mb-4 mt-12 items-center ">
+      <div className="about-container">
         <img
           src="/images/intro.png"
           alt="intro"
-          className="w-32 h-32  rounded-lg mr-6   "
+          className="about-image"
         />
 
-        <p className="font-bold text-5xl ">Hi, I'm Anmol Dhiman 👋</p>
+        <p className="about-heading">Hi, I'm Anmol Dhiman 👋</p>
       </div>
-      <p className=" text-base/7">
+      <p className="about-description">
         I love making things simple and easier to understand. Whether it's
         blockchain, smart contracts, or new tech, I enjoy breaking down complex
         ideas into clear, practical solutions. Always exploring, always

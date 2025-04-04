@@ -7,12 +7,12 @@ import BlogRender from "./components/BlogRender.js";
 function App() {
   return (
     <>
-      <div className="flex justify-center">
-        <div className="w-1/2">
+      <div className="app-container">
+        <div className="app-content">
           <About />
           <BlogRender />
-        </div>{" "}
-      </div>{" "}
+        </div>
+      </div>
     </>
   );
 }
