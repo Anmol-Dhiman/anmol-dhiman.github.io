@@ -40,17 +40,23 @@ const Tags = {
     bgColor: "#FFD700", // Gold
     textColor: "#000000", // Black for better contrast
   },
+  core: {
+    text: "Core",
+    bgColor: "#FF6F61", // Coral red / Warm salmon tone
+    textColor: "#FFFFFF", // Stands out clearly on dark and coral
+  },
 };
 
 const defaultImage = "/images/default.png";
 
 export const BlogData = [
   {
-    title: "EIP-7691 : Blob throughput increase",
-    date: "03/04/2025",
-    tags: [Tags.eip],
-    slug: "eip-7691",
+    title: "EIP-2718 : Typed Transaction Envelope",
+    date: "04/04/2025",
+    tags: [Tags.eip, Tags.core],
+    slug: "eip-2718",
     image: defaultImage,
-    description: "Increasing the throughput of blob transactions in Ethereum.",
+    description:
+      "Defines a new transaction type that is an envelope for future transaction types.",
   },
 ];
