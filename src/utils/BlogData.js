@@ -17,8 +17,8 @@ const Tags = {
     textColor: "#FFFFFF",
   },
 
-  defi: {
-    text: "DeFi",
+  pectra: {
+    text: "Pectra",
     bgColor: "#36D60C", // Bright green
     textColor: "#FFFFFF",
   },
@@ -50,6 +50,14 @@ const Tags = {
 const defaultImage = "/images/default.png";
 
 export const BlogData = [
+  {
+    title: "EIP-7623 : Increase calldata cost",
+    date: "07/04/2025",
+    tags: [Tags.eip, Tags.core, Tags.pectra],
+    slug: "eip-7623",
+    image: defaultImage,
+    description: "Increase calldata cost to reduce maximum block size",
+  },
   {
     title: "EIP-2718 : Typed Transaction Envelope",
     date: "04/04/2025",
