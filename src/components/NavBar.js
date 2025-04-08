@@ -22,8 +22,8 @@ const Navbar = () => {
         }}
       >
         <LuDownload size={sizeValue} style={{ marginRight: "8px" }} />
-        My Resume{" "}
-      </a>{" "}
+        My Resume
+      </a>
       <div className="flex gap-6">
         <a
           href={Links.twitter_x}
@@ -31,33 +31,33 @@ const Navbar = () => {
           rel="noopener noreferrer"
           className="nav"
         >
-          <FaXTwitter size={sizeValue} />{" "}
-        </a>{" "}
+          <FaXTwitter size={sizeValue} />
+        </a>
         <a
           href={Links.github}
           target="_blank"
           rel="noopener noreferrer"
           className="nav"
         >
-          <FaGithub size={sizeValue} />{" "}
-        </a>{" "}
+          <FaGithub size={sizeValue} />
+        </a>
         <a
           href={Links.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="nav"
         >
-          <FaLinkedin size={sizeValue} />{" "}
-        </a>{" "}
+          <FaLinkedin size={sizeValue} />
+        </a>
         <a
           href={Links.mail}
           target="_blank"
           rel="noopener noreferrer"
           className="nav"
         >
-          <TbBrandGmail size={sizeValue} />{" "}
-        </a>{" "}
-      </div>{" "}
+          <TbBrandGmail size={sizeValue} />
+        </a>
+      </div>
     </nav>
   );
 };

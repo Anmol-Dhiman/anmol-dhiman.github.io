@@ -1,6 +1,3 @@
-import { useState } from "react";
-
-import Navbar from "./components/NavBar.js";
 import About from "./components/About.js";
 import BlogRender from "./components/BlogRender.js";
 

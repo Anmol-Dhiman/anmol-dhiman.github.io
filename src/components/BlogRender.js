@@ -24,9 +24,7 @@ const BlogRender = () => {
 
                 {/* Blog Content */}
                 <div>
-                  <h2 className="blog-title">
-                    {post.title}
-                  </h2>
+                  <h2 className="blog-title">{post.title}</h2>
                   <p className="blog-date">
                     {formatDateWithSuperscript(post.date)}
                   </p>
@@ -48,9 +46,7 @@ const BlogRender = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="blog-description">
-                    {post.description}
-                  </p>
+                  <p className="blog-description">{post.description}</p>
                 </div>
               </Link>
             );
