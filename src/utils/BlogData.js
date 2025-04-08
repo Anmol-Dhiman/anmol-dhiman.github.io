@@ -50,6 +50,15 @@ const Tags = {
 const defaultImage = "/images/default.png";
 
 export const BlogData = [
+  // {
+  //   title: "EIP-2929 : Gas cost increases for state access opcodes",
+  //   date: "07/04/2025",
+  //   tags: [Tags.eip, Tags.core],
+  //   slug: "eip-2929",
+  //   image: defaultImage,
+  //   description:
+  //     "Increase gas cost for state access opcodes based on warm and cold access",
+  // },
   {
     title: "EIP-7623 : Increase calldata cost",
     date: "07/04/2025",
