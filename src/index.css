@@ -239,51 +239,75 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     color: var(--text-primary);
+    font-family: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.blogpost-content h1,
-.blogpost-content h2,
-.blogpost-content h3,
-.blogpost-content h4,
-.blogpost-content h5,
-.blogpost-content h6 {
+.blogpost-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
     color: var(--text-primary);
+}
+
+.blogpost-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+    color: var(--text-primary);
+}
+
+.blogpost-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    line-height: 1.3;
+    line-height: 1.4;
+    color: var(--text-primary);
 }
 
 .blogpost-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.125rem;
+    line-height: 2;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     opacity: 0.9;
 }
 
 .blogpost-content a {
     color: var(--accent-color);
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .blogpost-content a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
-.blogpost-content code {
-    background-color: var(--primary-bg);
+
+/* Inline code styling */
+
+.blogpost-content code:not([class*="language-"]) {
+    background-color: rgba(59, 130, 246, 0.1);
     color: var(--accent-color);
     padding: 0.2em 0.4em;
     border-radius: 0.25rem;
     font-size: 0.9em;
-    border: 1px solid var(--border-color);
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
+
+/* Code block styling */
+
 .blogpost-content pre {
-    background-color: var(--primary-bg);
-    padding: 1rem;
+    background-color: var(--secondary-bg);
+    padding: 1.25rem;
     border-radius: 0.5rem;
     overflow-x: auto;
     margin: 1.5rem 0;
@@ -295,7 +319,71 @@ body {
     border: none;
     padding: 0;
     color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
 }
+
+
+/* Syntax highlighting theme */
+
+.blogpost-content .token.comment,
+.blogpost-content .token.prolog,
+.blogpost-content .token.doctype,
+.blogpost-content .token.cdata {
+    color: #565f89;
+}
+
+.blogpost-content .token.punctuation {
+    color: #7aa2f7;
+}
+
+.blogpost-content .token.property,
+.blogpost-content .token.tag,
+.blogpost-content .token.boolean,
+.blogpost-content .token.number,
+.blogpost-content .token.constant,
+.blogpost-content .token.symbol,
+.blogpost-content .token.deleted {
+    color: #bb9af7;
+}
+
+.blogpost-content .token.selector,
+.blogpost-content .token.attr-name,
+.blogpost-content .token.string,
+.blogpost-content .token.char,
+.blogpost-content .token.builtin,
+.blogpost-content .token.inserted {
+    color: #9ece6a;
+}
+
+.blogpost-content .token.operator,
+.blogpost-content .token.entity,
+.blogpost-content .token.url,
+.blogpost-content .language-css .token.string,
+.blogpost-content .style .token.string {
+    color: #7aa2f7;
+}
+
+.blogpost-content .token.atrule,
+.blogpost-content .token.attr-value,
+.blogpost-content .token.keyword {
+    color: #7aa2f7;
+}
+
+.blogpost-content .token.function,
+.blogpost-content .token.class-name {
+    color: #e0af68;
+}
+
+.blogpost-content .token.regex,
+.blogpost-content .token.important,
+.blogpost-content .token.variable {
+    color: #f7768e;
+}
+
+
+/* Lists styling */
 
 .blogpost-content ul,
 .blogpost-content ol {
@@ -306,34 +394,77 @@ body {
 }
 
 .blogpost-content li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+    margin-bottom: 1rem;
+    line-height: 2;
 }
+
+
+/* Blockquote styling */
 
 .blogpost-content blockquote {
     border-left: 4px solid var(--accent-color);
-    margin: 1.5rem 0;
-    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
     background-color: var(--secondary-bg);
     border-radius: 0 0.5rem 0.5rem 0;
+    font-style: italic;
 }
 
 .blogpost-content blockquote p {
     margin: 0;
-    font-style: italic;
+    color: var(--text-primary);
+    opacity: 0.9;
 }
+
+
+/* Image styling */
 
 .blogpost-content img {
     max-width: 100%;
     height: auto;
     border-radius: 0.5rem;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+
+/* Horizontal rule styling */
 
 .blogpost-content hr {
     border: none;
     border-top: 1px solid var(--border-color);
+    margin: 2.5rem 0;
+}
+
+
+/* Table styling */
+
+.blogpost-content table {
+    width: 100%;
+    border-collapse: collapse;
     margin: 2rem 0;
+    background-color: var(--secondary-bg);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.blogpost-content th {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+}
+
+.blogpost-content td {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.blogpost-content tr:hover {
+    background-color: rgba(59, 130, 246, 0.05);
 }
 
 
@@ -430,29 +561,23 @@ table tr:hover {
 /* Code Block Styling */
 
 .code-block {
-    margin: 1.5rem 0;
-    border-radius: 8px;
+    margin: 0;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
+    background-color: transparent;
 }
-
-
-/* Style for the syntax highlighter container */
 
 .code-block pre {
     margin: 0 !important;
-    padding: 1rem !important;
-    background-color: #282a36 !important;
-    /* Dracula theme background */
+    padding: 1.25rem !important;
+    background-color: var(--secondary-bg) !important;
     font-size: 0.95rem !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
     overflow-x: auto !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0.5rem;
 }
-
-
-/* Style for the code inside syntax highlighter */
 
 .code-block code {
     font-family: "JetBrains Mono", "Fira Code", monospace !important;
@@ -464,26 +589,106 @@ table tr:hover {
     overflow-wrap: normal !important;
     tab-size: 2 !important;
     hyphens: none !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    line-height: 1.8 !important;
 }
 
 
-/* Scrollbar styling for code blocks */
+/* Language indicator */
+
+.code-block::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary-bg);
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    font-family: "Satoshi", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--border-color);
+}
+
+
+/* Scrollbar styling */
 
 .code-block pre::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
+    height: 6px;
+    width: 6px;
 }
 
 .code-block pre::-webkit-scrollbar-track {
-    background: #282a36;
-    border-radius: 4px;
+    background: var(--primary-bg);
+    border-radius: 3px;
 }
 
 .code-block pre::-webkit-scrollbar-thumb {
-    background: #44475a;
-    border-radius: 4px;
+    background: var(--border-color);
+    border-radius: 3px;
 }
 
 .code-block pre::-webkit-scrollbar-thumb:hover {
-    background: #6272a4;
+    background: var(--accent-color);
+}
+
+
+/* Override syntax highlighting colors */
+
+.code-block .token.comment,
+.code-block .token.prolog,
+.code-block .token.doctype,
+.code-block .token.cdata {
+    color: #565f89;
+}
+
+.code-block .token.punctuation {
+    color: #7aa2f7;
+}
+
+.code-block .token.property,
+.code-block .token.tag,
+.code-block .token.boolean,
+.code-block .token.number,
+.code-block .token.constant,
+.code-block .token.symbol,
+.code-block .token.deleted {
+    color: #bb9af7;
+}
+
+.code-block .token.selector,
+.code-block .token.attr-name,
+.code-block .token.string,
+.code-block .token.char,
+.code-block .token.builtin,
+.code-block .token.inserted {
+    color: #9ece6a;
+}
+
+.code-block .token.operator,
+.code-block .token.entity,
+.code-block .token.url,
+.code-block .language-css .token.string,
+.code-block .style .token.string {
+    color: #7aa2f7;
+}
+
+.code-block .token.atrule,
+.code-block .token.attr-value,
+.code-block .token.keyword {
+    color: #7aa2f7;
+}
+
+.code-block .token.function,
+.code-block .token.class-name {
+    color: #e0af68;
+}
+
+.code-block .token.regex,
+.code-block .token.important,
+.code-block .token.variable {
+    color: #f7768e;
 }

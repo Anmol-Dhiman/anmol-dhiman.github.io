@@ -57,7 +57,7 @@ const BlogPost = () => {
                     ? className.replace("lang-", "")
                     : "javascript";
                   return (
-                    <div className="code-block">
+                    <div className="code-block" data-language={language}>
                       <SyntaxHighlighter language={language} style={dracula}>
                         {children}
                       </SyntaxHighlighter>
