@@ -36,7 +36,7 @@ const BlogPost = () => {
   if (markdown === "")
     return (
       <div className="blogpost-loading-container">
-        <div className="blogpost-loading-text">Loading{dots}</div>
+        <div className="blogpost-loading-text"> Loading {dots} </div>{" "}
       </div>
     );
 
@@ -51,13 +51,13 @@ const BlogPost = () => {
                 component: ({ className, children, ...props }) => {
                   const isInline = !className;
                   if (isInline) {
-                    return <code className="inline-code">{children}</code>;
+                    return <code className="inline-code"> {children} </code>;
                   }
                   const language = className
                     ? className.replace("lang-", "")
                     : "javascript";
                   return (
-                    <div className="code-block" >
+                    <div className="code-block">
                       <SyntaxHighlighter language={language} style={dracula}>
                         {children}
                       </SyntaxHighlighter>
