@@ -8,8 +8,8 @@ function App() {
         <div className="app-content">
           <About />
           <BlogRender />
-        </div>
-      </div>
+        </div>{" "}
+      </div>{" "}
     </>
   );
 }

@@ -2,58 +2,55 @@ import { BlogData } from "../utils/BlogData";
 import { Link } from "react-router-dom";
 
 const BlogRender = () => {
+  // Use BlogData directly since we're not filtering yet
+  const blogs = BlogData;
+
   return (
-    <>
-      <div className="blog-container">
-        <div className="blog-grid">
-          {BlogData.map((post) => {
-            return (
-              <Link
-                key={post.slug}
-                to={`/blog/${post.slug}`}
-                className="blog-card"
-              >
-                {/* Blog Image */}
-                {post.image && (
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="blog-image"
-                  />
-                )}
+    <div className="blog-container">
+      <div className="blog-grid">
+        {blogs.map((post) => {
+          return (
+            <Link
+              key={post.slug}
+              to={`/blog/${post.slug}`}
+              className="blog-card"
+            >
+              {/* Blog Image */}
+              {post.image && (
+                <img src={post.image} alt={post.title} className="blog-image" />
+              )}
 
-                {/* Blog Content */}
-                <div>
-                  <h2 className="blog-title">{post.title}</h2>
-                  <p className="blog-date">
-                    {formatDateWithSuperscript(post.date)}
-                  </p>
+              {/* Blog Content */}
+              <div>
+                <h2 className="blog-title">{post.title}</h2>
+                <p className="blog-date">
+                  {formatDateWithSuperscript(post.date)}
+                </p>
 
-                  {/* Tags */}
-                  <div className="blog-tags">
-                    {post.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="blog-tag"
-                        style={{
-                          backgroundColor: tag.bgColor,
-                          color: tag.textColor,
-                        }}
-                      >
-                        {tag.text}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Description */}
-                  <p className="blog-description">{post.description}</p>
+                {/* Tags */}
+                <div className="blog-tags">
+                  {post.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="blog-tag"
+                      style={{
+                        backgroundColor: tag.bgColor,
+                        color: tag.textColor,
+                      }}
+                    >
+                      {tag.text}
+                    </span>
+                  ))}
                 </div>
-              </Link>
-            );
-          })}
-        </div>
+
+                {/* Description */}
+                <p className="blog-description">{post.description}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 };
 
@@ -74,8 +71,7 @@ const formatDateWithSuperscript = (dateString) => {
   return (
     <span>
       {dayNumber}
-      {suffix}
-      &nbsp;
+      {suffix}&nbsp;
       {date.toLocaleString("en-US", { month: "long" })}, {year}
     </span>
   );
