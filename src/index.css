@@ -822,3 +822,138 @@
             letter-spacing: 0.5px;
             border: 1px solid var(--border-color);
         }
+        /* Tag Sort Bar */
+        
+        .tag-sort-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: var(--secondary-bg);
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .tag-sort-button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tag-sort-button:hover {
+            background-color: var(--hover-bg);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .tag-sort-button.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        /* Tag Sort Container */
+        
+        .tag-sort-container {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: var(--secondary-bg);
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .tag-sort-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .tag-sort-label {
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .tag-sort-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tag-sort-trigger {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tag-sort-trigger:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .tag-sort-arrow {
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .tag-sort-dropdown:hover .tag-sort-arrow {
+            transform: translateY(2px);
+        }
+        
+        .tag-sort-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            background-color: var(--primary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            min-width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .tag-sort-dropdown:hover .tag-sort-options {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .tag-sort-option {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: none;
+            background: none;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .tag-sort-option:hover {
+            background-color: var(--hover-bg);
+            color: var(--accent-color);
+        }
+        
+        .tag-sort-option.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
