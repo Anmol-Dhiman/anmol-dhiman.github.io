@@ -115,9 +115,8 @@ const formatDateWithSuperscript = (dateString) => {
 
   return (
     <span>
-      {" "}
-      {dayNumber} {suffix} & nbsp;{" "}
-      {date.toLocaleString("en-US", { month: "long" })}, {year}{" "}
+      {dayNumber}
+      {suffix} {date.toLocaleString("en-US", { month: "long" })}, {year}{" "}
     </span>
   );
 };
