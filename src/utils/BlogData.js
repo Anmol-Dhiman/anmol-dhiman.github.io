@@ -51,6 +51,15 @@ const defaultImage = "/images/default.png";
 
 export const BlogData = [
   {
+    title: "EIP-7685 : General purpose execution layer requests ",
+    date: "16/04/2025",
+    tags: [Tags.eip, Tags.core, Tags.pectra],
+    slug: "eip-7685",
+    image: defaultImage,
+    description:
+      "A general purpose bus for sharing EL triggered requests with the CL",
+  },
+  {
     title: "EIP-7691 : Blob throughput increase",
     date: "12/04/2025",
     tags: [Tags.eip, Tags.core, Tags.pectra],
