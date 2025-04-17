@@ -11,8 +11,8 @@ const Tags = {
     textColor: "#FFFFFF",
   },
 
-  solidity: {
-    text: "Solidity",
+  informational: {
+    text: "Informational",
     bgColor: "#8E44AD", // Purple
     textColor: "#FFFFFF",
   },
@@ -50,6 +50,15 @@ const Tags = {
 const defaultImage = "/images/default.png";
 
 export const BlogData = [
+  {
+    title: "EIP-7840 : Add blob schedule to EL config files ",
+    date: "17/04/2025",
+    tags: [Tags.eip, Tags.informational, Tags.pectra],
+    slug: "eip-7840",
+    image: defaultImage,
+    description:
+      "Include a per-fork blob parameters in client configuration files",
+  },
   {
     title: "EIP-7685 : General purpose execution layer requests ",
     date: "16/04/2025",
