@@ -51,6 +51,15 @@ const defaultImage = "/images/default.png";
 
 export const BlogData = [
   {
+    title: "EIP-7549 : Move committee index outside Attestation ",
+    date: "18/04/2025",
+    tags: [Tags.eip, Tags.core, Tags.pectra],
+    slug: "eip-7549",
+    image: defaultImage,
+    description:
+      "Move committee index outside of the signed Attestation message",
+  },
+  {
     title: "EIP-7840 : Add blob schedule to EL config files ",
     date: "17/04/2025",
     tags: [Tags.eip, Tags.informational, Tags.pectra],
